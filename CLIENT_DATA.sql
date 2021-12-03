@@ -1,9 +1,13 @@
 create table CLIENT_DATA (
-	first_name VARCHAR(50),
-	last_name VARCHAR(50),
-	email VARCHAR(50),
-	Employer VARCHAR(50)
+	Client_ID  Integer     NOT NULL auto_increment,
+	first_name VARCHAR(50) NOT NULL,
+	last_name  VARCHAR(50) NOT NULL,
+	email      VARCHAR(50) NOT NULL,
+	Employer   VARCHAR(50) NULL,
+    
+    constraint prm_key primary key (Client_ID)
 );
+ALTER TABLE CLIENT_DATA AUTO_INCREMENT=100;
 insert into CLIENT_DATA (first_name, last_name, email, Employer) values ('Marve', 'Beaumont', 'mbeaumont0@theguardian.com', 'Omba');
 insert into CLIENT_DATA (first_name, last_name, email, Employer) values ('Willyt', 'Gell', 'wgell1@yahoo.com', 'Livepath');
 insert into CLIENT_DATA (first_name, last_name, email, Employer) values ('Philbert', 'Dack', 'pdack2@meetup.com', 'Wikibox');
